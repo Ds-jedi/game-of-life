@@ -20,8 +20,8 @@ pipeline {
         {
             steps 
             {
-                git branch: 'nigga'
-                url: 'https://github.com/Ds-jedi/game-of-life'
+                git branch: 'nigga' ,
+          	      url: 'https://github.com/Ds-jedi/game-of-life'
                 sh 'mvn compile'
             }
        }
