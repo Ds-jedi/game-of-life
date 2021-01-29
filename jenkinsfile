@@ -20,7 +20,7 @@ pipeline {
         {
             steps 
             {
-                git branch: 'nigga' ,
+                git branch: 'master' ,
           	      url: 'https://github.com/Ds-jedi/game-of-life'
                 sh 'mvn compile'
             }
