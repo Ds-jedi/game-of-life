@@ -16,5 +16,14 @@ pipeline {
                 sh 'mvn package'
             }
         }
+        stage('compile other branch') 
+        {
+            steps 
+            {
+                git branch: 'nigga'
+                url: 'https://github.com/Ds-jedi/game-of-life'
+                sh 'mvn compile'
+            }
+       }
     }
 }
