@@ -4,6 +4,11 @@ pipeline {
     {
         upstream(upstreamProjects: 'dummy', threshold:hudson.model.Result.SUCCESS)
     }
+    parameters 
+    {
+        string(name: 'BRANCH_FOR_BUILD', defaultValue: 'master', description: 'Enterthe branch to be built')
+    }
+
     stages 
     {
         stage('Source')
@@ -18,8 +23,6 @@ pipeline {
             steps 
             {
                 sh 'mvn package'
-                input 'continue to next step?'
-                archiveArtifacts 'gameoflife-core/target/*.jar'
             }
         }
     }
