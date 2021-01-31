@@ -15,7 +15,8 @@ pipeline {
         {
             steps 
             {
-                git 'https://github.com/Ds-jedi/game-of-life'
+                git 'https://github.com/Ds-jedi/game-of-life' , 
+                branch:"${params.BRANCH_FOR_BUILD}"
             }
         }
         stage('Package')
